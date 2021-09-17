@@ -54,7 +54,17 @@ npx gulp 'vsix:release:package'
 
 then run `Extensions: Install from VSIX` from the command pallete and select the `csharp-VERSION_NUMBER.vsix` file.
 
-# From [OmniSharp/omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode) README
+## Contributing
+
+**Stability**
+Issues and pull requests for improving stability, reported CVE resolutions, or tested improvements are targetted in this repo.
+
+**Feature Requests**
+For issues specific to bugs or features, checkout the upstream repository dependencies `netcoredbg` or `omnisharp-vscode`.
+
+----
+
+# [OmniSharp/omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode) README
 
 ## Note about using .NET Core 3.1.40x SDKs
 
@@ -101,3 +111,8 @@ To **run and develop** do the following:
 - Press <kbd>F5</kbd> to debug
 
 To **test** do the following: `npm run test` or <kbd>F5</kbd> in VS Code with the "Launch Tests" debug configuration.
+
+---
+## License
+
+This project is released under MIT, for details refer to [LICENSE](LICENSE.txt) and upstream [RuntimeLicenses](RuntimeLicenses/license.txt)

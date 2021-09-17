@@ -16,7 +16,7 @@ export interface ActivationResult {
 }
 
 export async function activateCSharpExtension(): Promise<ActivationResult | undefined> {
-    const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>("muhammad-sammy.csharp");
+    const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>("sar.csharp");
 
     if (!csharpExtension.isActive) {
         await csharpExtension.activate();
@@ -24,7 +24,7 @@ export async function activateCSharpExtension(): Promise<ActivationResult | unde
 
     try {
         await csharpExtension.exports.initializationFinished();
-        console.log("muhammad-sammy.csharp activated");
+        console.log("sar.csharp activated");
         return {
             advisor: await csharpExtension.exports.getAdvisor(),
             eventStream: csharpExtension.exports.eventStream
@@ -37,7 +37,7 @@ export async function activateCSharpExtension(): Promise<ActivationResult | unde
 }
 
 export async function restartOmniSharpServer(): Promise<void> {
-    const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>("muhammad-sammy.csharp");
+    const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>("sar.csharp");
 
     if (!csharpExtension.isActive) {
         await activateCSharpExtension();

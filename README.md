@@ -1,11 +1,38 @@
-# free-omnisharp-vscode
+# [LTS] FOSS C# Debugger & OmniSharp for VS Code-like Editors
 
-The debugger included in the official C# extension is [proprietary](https://aka.ms/VSCode-DotNet-DbgLicense) and is licensed to only work with Microsoft versions of vscode.
-This extension replaces it with [Samsung's MIT-licensed alternative](https://github.com/Samsung/netcoredbg/blob/master/LICENSE).
+C# Debugging is only supported in official Microsoft-signed binary blob releases of VS Code due to [License](https://aka.ms/VSCode-DotNet-DbgLicense) restrictions and is considered proprietary.
+
+This extension replaces `NetCoreDbg` with [Samsung's MIT-licensed alternative](https://github.com/Samsung/netcoredbg/blob/master/LICENSE).
+
+## About LTS Fork
+
+Long-Term Support fork tracks upstream changes built and tested across different platforms. Each release is pegged to provide maximum stability, security, and usability to prevent developer downtime.
+
+**Dependency Versions**
+
+↗ [NetCoreDbg-LTS](https://github.com/sar/netcoredbg-LTS): Release `1.20.786` \
+↗ [OmniSharp-VSCode](https://github.com/OmniSharp/omnisharp-vscode): Release `1.23.15`
+
+**Tested Deployments**
+
+✔ [Code-Server](https://github.com/sar/vs-code-server-with-ssl) Containers
+  * Release `3.12.0`
+  * VS Code Release `1.6.0`
+
+✔ [VS Codium](https://github.com/VSCodium/vscodium)
+  * Release `1.60.1`
+
+✔ [Microsoft/VSCode - Code-OSS](https://github.com/microsoft/vscode)
+  * Release `1.60.1`
+
+⚠ [GitPod](https://github.com/gitpod-io/gitpod)
+  * Debugger fails due to dependency on dotnet runtime env issue [#5090](https://github.com/gitpod-io/gitpod/issues/5090)
+
+---
 
 ## Installation
 
-This extension is published at [open-vsx.org](https://open-vsx.org/extension/muhammad-sammy/csharp).
+This extension is published at [open-vsx.org](https://open-vsx.org/extension/sar/csharp) using Github Actions CI/CD Pipeline.
 
 ### Build from source
 
